@@ -1,0 +1,43 @@
+.card {
+    width: 18rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    margin-block: 50px;
+    margin-left: 70px;
+}
+
+.card-inner {
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+}
+
+.front {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+iframe {
+    height: 286px;
+}
+
+.icon {
+    width: 30px;
+}
+
